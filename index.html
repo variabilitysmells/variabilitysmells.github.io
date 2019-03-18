@@ -1,0 +1,119 @@
+<html>
+    <meta charset="UTF-8">
+
+    <head>
+        <title>Towards Variability-aware Smells: A Validation Study</title>
+        <style type="text/css">
+		/*<!--h1{color:#D40000}
+			h2{color:#bc2d2d}
+			h4{color:#005CAD} -->*/
+
+			th{background-color:#fcdede}
+
+			a{color:#D40000}
+
+			#wrapper{width: 960px; margin-left: auto; margin-right: auto;}
+			#footer{text-align: center;}
+
+			.subsection{margin-left:40;}
+			.subsubsection{margin-left:80;}
+        </style>
+
+        <link type="text/css" href="jquery/css/custom-theme/jquery-ui-1.8.24.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="jquery/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="jquery/js/jquery-ui-1.8.24.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				// Accordion
+				$("#accordion").accordion({ autoHeight: false, navigation: true, header: "h3" });
+
+				// Tabs
+				$('#tab-docs').tabs();
+				$('#tab-shadowing').tabs();
+				$('#tab-metrics').tabs();
+
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+
+			});
+		</script>
+
+
+    </head>
+
+
+    <body>
+        <div id="wrapper" >
+            <div id="top" >
+
+                <a name="top"><img src="img/vasspl_imagem.png" height="200" width="960" alt="topo da página" style="text-align:center;"></a>
+                <h1 class="title" style="text-align: center;">Towards Variability-aware Smells: A Validation Study</h1>
+                <h2 class="subtitle" style="text-align: center;">--SPLC 2019 Supplementary Material--</h2>
+            </div>
+
+
+            <div id="middle" >
+                <h1>Overview</h1>
+                <p>Variability implementation adds a new dimension of complexity in highly-configurable system artifacts, such as source code and feature model, thus giving rise to new possibilities for design flaws. Bad smells are an established concept to describe design flaws or decay in software artifacts. However, existing smells have no notion of variability and thus do not support flaws regarding variable implementations.</p>
+
+                <p>Variability-aware smell is a relative new research and increasing topic. However, this research topic has just an initial body of knowledge and there is very little evidence of smells related to the variability implementation context. Therefore, the topic demands investigation to characterize variability-aware smells in SPLs and propose solutions to address them.</p>
+
+                <p>In this work, we validate a set of five new variability-aware smells for the context of software product lines feature model and source code artifacts. The last ones are variability-aware smells in the context of SPL projects implemented with #ifdef directives, annotation-based variability implementation (conditional compilation mechanism). These smells have been documented based on recurrent observations
+                  in open source SPL projects implemented with the Java language.</p>
+
+                <p>We aim at investigating whether the documented smells are in fact variability-aware smells and their impact on program comprehension, maintainability, and evolvability quality attributes. We intent to validate the documented variability-aware smell types based on an empirical validation study performed in three software companies. In this study, we reviewed instances of variability-aware smells reported by 16 software developers. Moreover, we investigated human factors that might influence on the detection of variability-aware smells. In particular, we investigated the human factors: experience in software development and the main programming language of the developers. We are interested in how these factors might influence on variability-aware smell detection.</p>
+
+                <p>The empirical validation experience reported and packaged in this paper can contribute to consolidate the variability-aware smells catalogue and discuss open issues related to variability implementation, maintenance and evolution. This work is one step toward to establish deeply knowledge on smell in the context of variability implementations by (i) characterizing evidence of five relatively new variability-aware smells; (ii) investigating how human factors can influence on variability-aware smell detection precision, effectiveness, and efficiency; and (iii) characterizing the impact of these smell on program comprehension, maintainability, and evolvability.</p>
+
+                <p>On this page, we provide supplementary material for this work.</p>
+
+                <h1>VASSPL: New Variability-Aware Smells</h1>
+                <p>In this Section, we introduce the new observed variability-aware smells. For each smell, we describe, present an illustrative example, and discuss potential problems for product derivation, program comprehension, maintenance, and evolution in SPL projects.</p>
+
+                <ul>
+				            <li>Poor Annotation Trace <b><a href="data/smells/PoorAnnotationTrace.pdf">[pdf]</a></b></li>
+				            <li>Redundant Annotation <b><a href="data/smells/RedundantAnnotation.pdf">[pdf]</a></b></li>
+                    <li>Unnecessary Annotation <b><a href="data/smells/UnnecessaryAnnotation.pdf">[pdf]</a></b></li>
+                    <li>Bad Annotation Name <b><a href="data/smells/BadAnnotationName.pdf">[pdf]</a></b></li>
+                    <li>Lack of Annotation <b><a href="data/smells/LackofAnnotation.pdf">[pdf]</a></b></li>
+			          </ul>
+
+
+                <h1>Empirical Validation Study</h1>
+                  <p>This section contains the artifacts and dataset of the empirical validation study.</p>
+
+                  <ul>
+				          <li>Consent Form <b><a href="data/validation/validation_ConsentForm.pdf">[pdf]</a></b></li>
+				          <li>Participant Characterization Form <b><a href="data/validation/validation_CharacterizationForm.pdf">[pdf]</a></b></li>
+				          <li>Participant Feedback Form <b><a href="data/validation/validation_FeedbackForm.pdf">[pdf]</a></b></li>
+                  <li>Variability-aware Smell Handout <b><a href="data/validation/validation_smellsCatalog.pdf">[pdf]</a></b></li>
+                  <li>Variability-aware Smell Report Template <b><a href="data/validation/validation_smellReport.pdf">[pdf]</a></b></li>
+                  <li>Industry Study Database <b><a href="data/validation/IndustryStudy_database.csv">[csv]</a></b></li>
+                  <li>SPL Projects <b><a href="data/validation/SPLs.zip">[zip]</a></b></li>
+			            </ul>
+
+                <!-- <h1>Contacts</h1>
+                <ul>
+                 <li><b>Iuri Santos Souza (Federal University of Bahia, Brazil)</b> <i>[iuri.santos at ufba dot br]</i></li>
+                <li><b>Paulo Cesar Masiero (Federal University of Bahia, Brazil)</b> <i>[pcmasiero at gmail dot com]</i></li>
+                <li><b>Carolyn Seaman (University of Maryland Baltimore County, USA)</b> <i>[cseaman at umbc dot edu]</i></li>
+                <li><b>Gecynalda Soares da Silva Gomes (Federal University of Bahia, Brazil)</b> <i>[gecynaldassg at gmail dot com]</i></li>
+                <li><b>Gilles Perrouin (University of Namur, Belgium)</b> <i>[gilles dot perrouin at unamur dot be]</i></li>
+                <li><b>Pierre Yves Schobbens (University of Namur, Belgium)</b> <i>[pierre dash yves dot schobbens at unamur dot be]</i></li>
+                <li><b>Christina Chavez (Federal University of Bahia, Brazil)</b> <i>[christina dot flach at gmail dot com]</i></li>
+                <li><b>Eduardo Santana de Almeida (Federal University of Bahia, Brazil)</b> <i>[esa at rise dot com dot br]</i></li>
+
+                </ul> -->
+
+            </div>
+        </div>
+
+
+
+    </body>
+
+</html>
